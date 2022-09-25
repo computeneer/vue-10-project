@@ -1,0 +1,159 @@
+{
+  "todos": [
+    {
+      "text": "Bu bir todo denemesidir",
+      "categoryId": 2,
+      "userId": 1,
+      "isDone": false,
+      "id": 1
+    },
+    {
+      "text": "Todo Item",
+      "categoryId": 7,
+      "userId": 1,
+      "isDone": false,
+      "id": 2
+    },
+    {
+      "text": "Maths Homework ",
+      "categoryId": 1,
+      "userId": 1,
+      "isDone": false,
+      "id": 3
+    },
+    {
+      "text": "Delete yesterday's backup file",
+      "categoryId": 2,
+      "userId": 1,
+      "isDone": false,
+      "id": 4
+    },
+    {
+      "text": "Go to the beach to play volleyball",
+      "categoryId": 3,
+      "userId": 1,
+      "isDone": false,
+      "id": 5
+    },
+    {
+      "text": "Buy some food",
+      "categoryId": 4,
+      "userId": 1,
+      "isDone": false,
+      "id": 6
+    },
+    {
+      "text": "Buy me a iPhone 14 Pro Max ",
+      "categoryId": 4,
+      "userId": 1,
+      "isDone": false,
+      "id": 7
+    },
+    {
+      "text": "50 pushups",
+      "categoryId": 5,
+      "userId": 1,
+      "isDone": false,
+      "id": 8
+    },
+    {
+      "text": "30 pullups",
+      "categoryId": 5,
+      "userId": 1,
+      "isDone": false,
+      "id": 9
+    },
+    {
+      "text": "Dolmabahce Sarayi",
+      "categoryId": 6,
+      "userId": 1,
+      "isDone": false,
+      "id": 10
+    },
+    {
+      "text": "test",
+      "categoryId": 6,
+      "userId": 1,
+      "isDone": false,
+      "id": 11
+    },
+    {
+      "text": "Cooking",
+      "categoryId": 3,
+      "userId": 4,
+      "isDone": false,
+      "id": 12
+    },
+    {
+      "text": "Go to the shop",
+      "categoryId": 4,
+      "userId": 4,
+      "isDone": false,
+      "id": 13
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Berat",
+      "lastName": "Demircan",
+      "username": "computeneer",
+      "email": "computeneer@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "firstName": "Furkan",
+      "lastName": "Demircan",
+      "username": "GoogleNoodle",
+      "email": "furkandem343557@gmail.com",
+      "password": "furkan123",
+      "id": 2
+    },
+    {
+      "firstName": "Nurcan",
+      "lastName": "Demircan",
+      "username": "nurdem",
+      "email": "abcq@dasd.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "firstName": "Danilo",
+      "lastName": "Zanna",
+      "username": "zanna1234",
+      "email": "zanna123@aaa.com",
+      "password": "123456",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Homeworks"
+    },
+    {
+      "id": 2,
+      "name": "Jobs"
+    },
+    {
+      "id": 3,
+      "name": "Daily"
+    },
+    {
+      "id": 4,
+      "name": "Shopping"
+    },
+    {
+      "id": 5,
+      "name": "Workout"
+    },
+    {
+      "id": 6,
+      "name": "Places to Visit"
+    },
+    {
+      "id": 7,
+      "name": "House works"
+    }
+  ]
+}
