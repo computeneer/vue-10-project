@@ -45,7 +45,7 @@ export default {
 
   .title {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-family: "Poppins-Regular";
     color: $radical-red;
   }
