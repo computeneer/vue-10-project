@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "firstName": "Berat",
+      "lastname": "Demircan",
+      "username": "computeneer",
+      "email": "computeneer@gmail.com",
+      "password": "c32a89001371c5a715fef9f6f406cda42f8e49f7158ef95662827c945a71ba23",
+      "accepted": true,
+      "id": 1
+    },
+    {
+      "firstName": "Furkan",
+      "lastname": "Demircan",
+      "username": "googlenudle",
+      "email": "furkandem343557@gmail.com",
+      "password": "a8e7d33ac6a96698b07bfde2d889e2af5bc08f0005a2f8afc75bf2362e072782",
+      "accepted": true,
+      "id": 2
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Sport"
+    },
+    {
+      "id": 2,
+      "name": "History"
+    },
+    {
+      "id": 3,
+      "name": "Maths"
+    },
+    {
+      "id": 4,
+      "name": "Physics"
+    },
+    {
+      "id": 5,
+      "name": "Technology"
+    },
+    {
+      "id": 6,
+      "name": "Country"
+    },
+    {
+      "id": 7,
+      "name": "Games"
+    }
+  ],
+  "questions": [],
+  "answers": [],
+  "correctAnswers": [],
+  "quizzes": [],
+  "admins": [
+    {
+      "id": 1,
+      "username": "computeneer",
+      "pass": "12345"
+    }
+  ]
+}
