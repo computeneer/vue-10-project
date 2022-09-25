@@ -1,11 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import { OhVueIcon, addIcons } from "oh-vue-icons";
+import { BiPersonBoundingBox, BiQuestionCircleFill, BiPersonPlusFill, BiPersonXFill } from "oh-vue-icons/icons/bi";
+import { GiClick } from "oh-vue-icons/icons/gi";
+import "./assets/style/main.scss";
+import "./assets/style/fonts.scss";
 
-import './assets/main.css'
+addIcons(BiPersonBoundingBox, BiQuestionCircleFill, BiPersonPlusFill, BiPersonXFill, GiClick);
+const app = createApp(App);
 
-const app = createApp(App)
-
-app.use(router)
-
-app.mount('#app')
+app.use(store);
+app.use(router);
+app.component("v-icon", OhVueIcon);
+app.mount("#app");
