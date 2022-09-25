@@ -2,43 +2,23 @@
   <nav>
     <div>
       <div class="nav-item">
-        <v-icon
-          name="bi-question-circle-fill"
-          animation="float"
-          speed="slow"
-          scale="1.5"
-        />
+        <v-icon name="bi-question-circle-fill" animation="float" speed="slow" scale="1.5" />
         <router-link to="/">Quiz Home</router-link>
       </div>
     </div>
     <div class="authenticated" v-if="!getIsAuthenticated">
       <router-link to="register" class="nav-item">
-        <v-icon
-          name="bi-person-plus-fill"
-          animation="float"
-          speed="slow"
-          scale="1.5"
-        />
+        <v-icon name="bi-person-plus-fill" animation="float" speed="slow" scale="1.5" />
         <span> Register </span>
       </router-link>
       <router-link to="login" class="nav-item">
-        <v-icon
-          name="bi-question-circle-fill"
-          animation="float"
-          speed="slow"
-          scale="1.5"
-        />
+        <v-icon name="bi-key-fill" animation="float" speed="slow" scale="1.5" />
         <span>Login</span>
       </router-link>
     </div>
     <div v-else>
-      <div class="logout nav-item">
-        <v-icon
-          name="bi-person-x-fill"
-          animation="float"
-          speed="slow"
-          scale="1.5"
-        />
+      <div @click="logout" class="logout nav-item">
+        <v-icon name="bi-person-x-fill" animation="float" speed="slow" scale="1.5" />
         <span>Logout</span>
       </div>
     </div>
@@ -56,6 +36,14 @@ export default {
   },
   computed: {
     ...mapGetters(["getIsAuthenticated"]),
+  },
+  methods: {
+    logout() {
+      this.$store.commit("logout");
+      setTimeout(() => {
+        this.$router.replace({ name: "login" });
+      }, 250);
+    },
   },
 };
 </script>
