@@ -2,6 +2,7 @@
   <Form :btnText="isSuccess ? 'Redirecting' : 'Login'" :title="'Login'" :onClick="onClick" :disabled="!isValid">
     <BaseInput :forValue="'username'" :label="'Username'" v-model="userData.username" />
     <BaseInput type="password" :forValue="'password'" :label="'Password'" v-model="userData.password" />
+    <router-link class="to-register" to="register">I don't have any account</router-link>
   </Form>
 </template>
 
@@ -10,6 +11,7 @@ import BaseInput from "../components/common/BaseInput.vue";
 import Form from "../components/common/Form.vue";
 import { hashPassword } from "@/utils/password";
 import axios from "@/utils/axios";
+import { mapGetters } from "vuex";
 export default {
   name: "LoginView",
   components: { BaseInput, Form },
@@ -20,24 +22,27 @@ export default {
         password: null,
       },
       isSuccess: null,
+      hasError: null,
     };
   },
   methods: {
     async onClick() {
+      this.isSuccess = false;
+      this.hasError = false;
       const password = hashPassword(this.userData.password);
-      const { data } = await axios.get(`/users?username=${this.userData.username}&password=${password}`);
-      if (data.length > 0) {
+      const result = await this.$store.dispatch("login", { username: this.userData.username, password });
+      if (result) {
         this.isSuccess = true;
-
         setTimeout(() => {
           this.$router.push({ name: "home" });
-        }, 2000);
+        }, 1500);
       } else {
-        this.isSuccess = false;
+        this.hasError = true;
       }
     },
   },
   computed: {
+    ...mapGetters(["getIsAuthenticated"]),
     isValid() {
       if (!this.userData.username) {
         return false;
@@ -51,4 +56,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.to-register {
+  display: block;
+  text-align: center;
+  margin-block-start: 1rem;
+  font-size: 1.3rem;
+  color: $radical-red;
+  font-family: "Poppins-Regular";
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.17rem;
+  }
+}
+</style>

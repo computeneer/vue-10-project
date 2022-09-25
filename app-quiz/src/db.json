@@ -52,12 +52,12 @@
   "questions": [],
   "answers": [],
   "correctAnswers": [],
-  "quizzes": [],
-  "admins": [
+  "quizzes": [
     {
       "id": 1,
-      "username": "computeneer",
-      "pass": "12345"
+      "categoryId": 1,
+      "name": "Quiz 1",
+      "difficulty": 1
     }
   ]
 }

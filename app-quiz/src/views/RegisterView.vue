@@ -103,6 +103,7 @@ export default {
   font-size: 1.2rem;
   color: $radical-red;
   user-select: none;
+  cursor: pointer;
   .check {
     width: 17px;
     aspect-ratio: 1 / 1;

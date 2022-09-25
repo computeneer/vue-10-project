@@ -10,6 +10,9 @@ export default {
   components: {
     TopBar,
   },
+  created() {
+    this.$store.dispatch("fetchDatas");
+  },
 };
 </script>
 

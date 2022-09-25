@@ -1,9 +1,18 @@
 <template>
-  <div>Home</div>
+  <div class="home">
+    <CategoryList />
+  </div>
 </template>
 
 <script>
-export default {};
+import CategoryList from "../components/home/CategoryList.vue";
+export default { components: { CategoryList } };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+</style>

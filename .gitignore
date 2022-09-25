@@ -27,3 +27,4 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+app-quiz/src/db.json
