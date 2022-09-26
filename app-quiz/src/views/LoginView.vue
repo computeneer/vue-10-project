@@ -10,7 +10,6 @@
 import BaseInput from "../components/common/BaseInput.vue";
 import Form from "../components/common/Form.vue";
 import { hashPassword } from "@/utils/password";
-import axios from "@/utils/axios";
 import { mapGetters } from "vuex";
 export default {
   name: "LoginView",
@@ -34,7 +33,7 @@ export default {
       if (result) {
         this.isSuccess = true;
         setTimeout(() => {
-          this.$router.push({ name: "home" });
+          this.$router.push("/");
         }, 1500);
       } else {
         this.hasError = true;

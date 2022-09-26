@@ -11,7 +11,7 @@ export default {
     TopBar,
   },
   created() {
-    this.$store.dispatch("fetchDatas");
+    this.$store.dispatch("fetchCategories");
   },
 };
 </script>

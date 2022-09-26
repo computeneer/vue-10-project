@@ -9,6 +9,16 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+      children: [
+        {
+          path: "",
+          component: () => import("../components/home/Category/CategoryList.vue"),
+        },
+        {
+          path: ":id",
+          component: () => import("../components/home/Quiz/QuizList.vue"),
+        },
+      ],
     },
     {
       path: "/login",

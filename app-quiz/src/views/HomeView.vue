@@ -1,12 +1,15 @@
 <template>
   <div class="home">
-    <CategoryList />
+    <router-view />
   </div>
 </template>
 
 <script>
-import CategoryList from "../components/home/CategoryList.vue";
-export default { components: { CategoryList } };
+import CategoryList from "../components/home/Category/CategoryList.vue";
+export default {
+  name: "HomeView",
+  components: { CategoryList },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -14,5 +17,7 @@ export default { components: { CategoryList } };
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
+  flex: 1;
 }
 </style>

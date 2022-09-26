@@ -9,12 +9,21 @@ import {
   BiPersonPlusFill,
   BiPersonXFill,
   BiKeyFill,
+  BiArrowLeftCircleFill,
 } from "oh-vue-icons/icons/bi";
 import { GiClick } from "oh-vue-icons/icons/gi";
 import "./assets/style/main.scss";
 import "./assets/style/fonts.scss";
 
-addIcons(BiPersonBoundingBox, BiQuestionCircleFill, BiPersonPlusFill, BiPersonXFill, GiClick, BiKeyFill);
+addIcons(
+  BiPersonBoundingBox,
+  BiQuestionCircleFill,
+  BiPersonPlusFill,
+  BiPersonXFill,
+  GiClick,
+  BiKeyFill,
+  BiArrowLeftCircleFill
+);
 const app = createApp(App);
 
 app.use(store);

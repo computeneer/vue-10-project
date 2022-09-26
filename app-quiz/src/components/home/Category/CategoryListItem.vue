@@ -1,9 +1,9 @@
 <template>
-  <div class="category">
+  <router-link :to="`/${category.id}`" class="category">
     <span>
       {{ category.name }}
     </span>
-  </div>
+  </router-link>
 </template>
 
 <script>
@@ -47,7 +47,7 @@ export default {
     background: $current-color;
     width: 0px;
     position: absolute;
-    transition: all 0.2s;
+    transition: all 0.4s;
   }
 
   &::before {

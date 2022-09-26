@@ -2,10 +2,11 @@ import { createStore } from "vuex";
 import axios from "@/utils/axios";
 const store = createStore({
   state: {
-    isAuthenticated: false,
+    isAuthenticated: localStorage.getItem("isAuth") || false,
     user: null,
     categories: [],
     quizzes: [],
+    isLoading: false,
   },
   getters: {
     getIsAuthenticated(state) {
@@ -17,13 +18,18 @@ const store = createStore({
     getQuizzes(state) {
       return state.quizzes;
     },
+    getIsLoading(state) {
+      return state.isLoading;
+    },
   },
   mutations: {
     login(state, payload) {
+      localStorage.setItem("isAuth", true);
       state.isAuthenticated = true;
       state.user = payload;
     },
     logout(state) {
+      localStorage.removeItem("isAuth");
       state.isAuthenticated = false;
       state.user = null;
     },
@@ -32,6 +38,9 @@ const store = createStore({
     },
     setQuizzes(state, payload) {
       state.quizzes = payload;
+    },
+    setIsLoading(state, payload) {
+      state.isLoading = payload;
     },
   },
   actions: {
@@ -43,13 +52,15 @@ const store = createStore({
       }
       return false;
     },
-    async fetchDatas({ commit }) {
-      axios.get("categories").then((category_response) => {
-        commit("setCategories", category_response.data);
-      });
-      axios.get("quizzes").then((quizzes_response) => {
-        commit("setQuizzes", quizzes_response.data);
-      });
+    async fetchCategories({ commit }) {
+      const { data } = await axios.get("categories");
+      commit("setCategories", data);
+    },
+    async fetchQuizzes({ commit }, quizId) {
+      commit("setIsLoading", true);
+      const { data } = await axios.get(`/quizzes?categoryId=${quizId}`);
+      commit("setQuizzes", data);
+      commit("setIsLoading", false);
     },
   },
 });

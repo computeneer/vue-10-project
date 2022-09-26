@@ -74,6 +74,7 @@ export default {
     &:not(:disabled):hover {
       box-shadow: 0 0 5px $btn-color, 0 0 15px $btn-color, 0 0 25px $btn-color, 0 0 45px $btn-color;
       filter: blur(0.3px);
+      border: 3px solid white;
     }
   }
 }

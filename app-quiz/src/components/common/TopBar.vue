@@ -3,7 +3,7 @@
     <div>
       <div class="nav-item">
         <v-icon name="bi-question-circle-fill" animation="float" speed="slow" scale="1.5" />
-        <router-link to="/">Quiz Home</router-link>
+        <router-link to="/">Quizzap</router-link>
       </div>
     </div>
     <div class="authenticated" v-if="!getIsAuthenticated">
