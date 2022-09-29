@@ -1,7 +1,8 @@
 <template>
+  <QuizListSearch />
   <Loading v-if="getIsLoading" />
   <div v-else-if="getQuizzes.length > 0" class="quiz-list">
-    <div v-for="quiz in getQuizzes" :key="quiz.id">{{ quiz.name }}</div>
+    <QuizListItem v-for="quiz in getQuizzes" :key="quiz.id" :quiz="quiz" />
   </div>
   <div v-else class="nothing-to-see">
     <router-link to="/">
@@ -14,10 +15,14 @@
 <script>
 import { mapGetters } from "vuex";
 import Loading from "@/components/common/Loading.vue";
+import QuizListItem from "./QuizListItem.vue";
+import QuizListSearch from "./QuizListSearch.vue";
 export default {
   name: "QuizList",
   components: {
     Loading,
+    QuizListItem,
+    QuizListSearch,
   },
   computed: {
     ...mapGetters(["getQuizzes", "getIsLoading"]),
@@ -33,6 +38,7 @@ export default {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .nothing-to-see {

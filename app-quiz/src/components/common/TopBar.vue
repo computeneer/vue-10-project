@@ -1,10 +1,10 @@
 <template>
   <nav>
     <div>
-      <div class="nav-item">
+      <router-link to="/categories" class="nav-item">
         <v-icon name="bi-question-circle-fill" animation="float" speed="slow" scale="1.5" />
-        <router-link to="/">Quizzap</router-link>
-      </div>
+        <span>Quizzap</span>
+      </router-link>
     </div>
     <div class="authenticated" v-if="!getIsAuthenticated">
       <router-link to="register" class="nav-item">

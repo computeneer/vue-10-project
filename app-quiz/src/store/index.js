@@ -6,7 +6,8 @@ const store = createStore({
     user: null,
     categories: [],
     quizzes: [],
-    isLoading: false,
+    isLoading: true,
+    selectedQuiz: null,
   },
   getters: {
     getIsAuthenticated(state) {
@@ -20,6 +21,9 @@ const store = createStore({
     },
     getIsLoading(state) {
       return state.isLoading;
+    },
+    getSelectedQuiz(state) {
+      return state.selectedQuiz;
     },
   },
   mutations: {
@@ -41,6 +45,10 @@ const store = createStore({
     },
     setIsLoading(state, payload) {
       state.isLoading = payload;
+    },
+    setSelectedQuiz(state, payload) {
+      console.log(payload);
+      state.selectedQuiz = payload;
     },
   },
   actions: {

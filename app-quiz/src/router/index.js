@@ -11,7 +11,12 @@ const router = createRouter({
       component: HomeView,
       children: [
         {
-          path: "",
+          path: "/",
+          redirect: "/categories",
+        },
+        {
+          path: "categories",
+          name: "home/categories",
           component: () => import("../components/home/Category/CategoryList.vue"),
         },
         {
@@ -35,6 +40,14 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/RegisterView.vue"),
+    },
+    {
+      path: "/quiz",
+      name: "quizview",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/QuizView.vue"),
     },
   ],
 });

@@ -58,6 +58,48 @@
       "categoryId": 1,
       "name": "Quiz 1",
       "difficulty": 1
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Quiz 2",
+      "difficulty": 1
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Quiz 3",
+      "difficulty": 2
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "name": "Quiz 4",
+      "difficulty": 4
+    },
+    {
+      "id": 5,
+      "categoryId": 2,
+      "name": "Quiz 5",
+      "difficulty": 2
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "name": "Quiz 6",
+      "difficulty": 2
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "name": "Quiz 7",
+      "difficulty": 3
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "name": "Quiz 8",
+      "difficulty": 4
     }
   ]
 }

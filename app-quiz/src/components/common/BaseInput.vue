@@ -91,6 +91,7 @@ label {
     border-inline: 3px solid $current-color;
     color: black;
     letter-spacing: 1px;
+    font-weight: bold;
   }
 }
 </style>

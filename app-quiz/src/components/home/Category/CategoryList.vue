@@ -14,6 +14,9 @@ export default {
     ...mapGetters(["getCategories"]),
   },
   components: { CategoryListItem },
+  mounted() {
+    this.$store.commit("setSelectedQuiz", null);
+  },
 };
 </script>
 
