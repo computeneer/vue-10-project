@@ -22,6 +22,9 @@ const store = createStore({
     getIsLoading(state) {
       return state.isLoading;
     },
+    getCategoryName(state, id) {
+      return state.categories.find((a) => a.id === state.selectedQuiz.categoryId).name;
+    },
     getSelectedQuiz(state) {
       return state.selectedQuiz;
     },
@@ -47,7 +50,6 @@ const store = createStore({
       state.isLoading = payload;
     },
     setSelectedQuiz(state, payload) {
-      console.log(payload);
       state.selectedQuiz = payload;
     },
   },

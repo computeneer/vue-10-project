@@ -1,25 +1,92 @@
 <template>
-  <div class="game-not-started">
+  <div v-if="!isSuccess" class="game-not-started">
     <div class="infos">
-      <span class="quiz">Quiz 1</span>
-      <span class="category">Sport</span>
+      <span class="quiz">{{ getSelectedQuiz.name }}</span>
+      <span class="category">{{ getCategoryName }}</span>
     </div>
     <div class="buttons">
-      <button class="btn">Start Quiz</button>
+      <button @click="fetchQuiz" class="btn">{{ isLoading ? "Loading..." : "Start Quiz" }}</button>
       <button class="btn btn-purple" @click="onReturnClick">Return</button>
     </div>
+  </div>
+  <div v-else class="game-started">
+    <span class="quiz">{{ getSelectedQuiz.name }}</span>
+    <QuestionContainer
+      v-for="question in questions"
+      :key="question.id"
+      :question="question"
+      :answers="getCurrentQuestionAnswers(question.id)"
+    />
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+import appAxios from "../utils/axios";
+import QuestionContainer from "../components/quiz/QuestionContainer.vue";
+
 export default {
   name: "QuizView",
-
+  data() {
+    return {
+      quiz: null,
+      isLoading: false,
+      isSuccess: false,
+      questions: null,
+      answers: null,
+      errors: [],
+    };
+  },
+  mounted() {
+    this.quiz = this.getSelectedQuiz;
+  },
+  computed: {
+    ...mapGetters(["getSelectedQuiz", "getCategoryName"]),
+  },
   methods: {
     onReturnClick() {
       this.$router.push({ name: "home/categories" });
     },
+    async fetchQuiz() {
+      if (this.isSuccess) {
+        return;
+      }
+      this.isLoading = true;
+      await appAxios
+        .get(`questions?quizId=${this.quiz.id}`)
+        .then((question_response) => {
+          this.questions = question_response.data;
+        })
+        .catch((err) => {
+          this.errors.push(err);
+          this.isSuccess = false;
+        });
+      await appAxios
+        .get(`answers?quizId=${this.quiz.id}`)
+        .then((answers_response) => {
+          this.answers = answers_response.data;
+          this.isSuccess = true;
+        })
+        .catch((err) => {
+          this.errors.push(err);
+          this.isSuccess = false;
+        })
+        .finally(() => {
+          this.isLoading = false;
+        });
+    },
+    getCurrentQuestionAnswers(questionId) {
+      console.log(this.answers);
+      if (this.answers) {
+        return this.answers?.find((answer) => answer.questionId === questionId);
+      } else {
+        console.log("IAMHERE");
+        this.fetchQuiz();
+        return this.answers?.find((answer) => answer.questionId === questionId);
+      }
+    },
   },
+  components: { QuestionContainer },
 };
 </script>
 
@@ -79,6 +146,17 @@ export default {
         }
       }
     }
+  }
+}
+
+.game-started {
+  .quiz {
+    display: block;
+    font-family: "Poppins-Regular";
+    font-size: 3rem;
+    color: $razzmatazz;
+    margin-inline: auto;
+    text-align: center;
   }
 }
 </style>

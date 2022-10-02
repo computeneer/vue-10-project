@@ -49,9 +49,542 @@
       "name": "Games"
     }
   ],
-  "questions": [],
-  "answers": [],
-  "correctAnswers": [],
+  "questions": [
+    {
+      "id": 1,
+      "quizId": 1,
+      "question": "Test Soru 1"
+    },
+    {
+      "id": 2,
+      "quizId": 1,
+      "question": "Test Soru 2"
+    },
+    {
+      "id": 3,
+      "quizId": 1,
+      "question": "Test Soru 3"
+    },
+    {
+      "id": 4,
+      "quizId": 2,
+      "question": "Test Soru 4"
+    },
+    {
+      "id": 5,
+      "quizId": 1,
+      "question": "Test Soru 5"
+    },
+    {
+      "id": 6,
+      "quizId": 1,
+      "question": "Test Soru 6"
+    },
+    {
+      "id": 7,
+      "quizId": 2,
+      "question": "Test Soru 7"
+    },
+    {
+      "id": 8,
+      "quizId": 2,
+      "question": "Test Soru 8"
+    },
+    {
+      "id": 9,
+      "quizId": 1,
+      "question": "Test Soru 9"
+    },
+    {
+      "id": 10,
+      "quizId": 1,
+      "question": "Test Soru 10"
+    },
+    {
+      "id": 11,
+      "quizId": 2,
+      "question": "Test Soru 11"
+    },
+    {
+      "id": 12,
+      "quizId": 3,
+      "question": "Test Soru 12"
+    },
+    {
+      "id": 13,
+      "quizId": 3,
+      "question": "Test Soru 13"
+    },
+    {
+      "id": 14,
+      "quizId": 1,
+      "question": "Test Soru 14"
+    },
+    {
+      "id": 15,
+      "quizId": 1,
+      "question": "Test Soru 15"
+    },
+    {
+      "id": 16,
+      "quizId": 2,
+      "question": "Test Soru 16"
+    },
+    {
+      "id": 17,
+      "quizId": 2,
+      "question": "Test Soru 17"
+    },
+    {
+      "id": 18,
+      "quizId": 3,
+      "question": "Test Soru 18"
+    },
+    {
+      "id": 19,
+      "quizId": 3,
+      "question": "Test Soru 19"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "quizId": 1,
+      "questionId": 1,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "quizId": 1,
+      "questionId": 2,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "quizId": 1,
+      "questionId": 3,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "quizId": 2,
+      "questionId": 4,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "quizId": 1,
+      "questionId": 5,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "quizId": 1,
+      "questionId": 6,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "quizId": 2,
+      "questionId": 7,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "quizId": 2,
+      "questionId": 8,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "quizId": 1,
+      "questionId": 9,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "quizId": 1,
+      "questionId": 10,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "quizId": 2,
+      "questionId": 11,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "quizId": 3,
+      "questionId": 12,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "quizId": 3,
+      "questionId": 13,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "quizId": 1,
+      "questionId": 14,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "quizId": 1,
+      "questionId": 15,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "quizId": 2,
+      "questionId": 16,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "quizId": 2,
+      "questionId": 17,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "quizId": 3,
+      "questionId": 18,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "quizId": 3,
+      "questionId": 19,
+      "answers": [
+        {
+          "text": "Answer 1",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 2",
+          "isCorrectAnswer": false
+        },
+        {
+          "text": "Answer 3",
+          "isCorrectAnswer": true
+        },
+        {
+          "text": "Answer 4",
+          "isCorrectAnswer": false
+        }
+      ]
+    }
+  ],
   "quizzes": [
     {
       "id": 1,
