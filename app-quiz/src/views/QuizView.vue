@@ -11,12 +11,16 @@
   </div>
   <div v-else class="game-started">
     <span class="quiz">{{ getSelectedQuiz.name }}</span>
-    <QuestionContainer
-      v-for="question in questions"
-      :key="question.id"
-      :question="question"
-      :answers="getCurrentQuestionAnswers(question.id)"
-    />
+    <div v-if="questions.length > 0">
+      <QuestionContainer
+        v-for="question in questions"
+        :key="question.id"
+        :question="question"
+        :answers="getCurrentQuestionAnswers(question.id)"
+      />
+      <button class="btn submit-btn" @click="onSubmit">Submit</button>
+    </div>
+    <div v-else>There is no Question in this Quizz</div>
   </div>
 </template>
 
@@ -41,13 +45,14 @@ export default {
     this.quiz = this.getSelectedQuiz;
   },
   computed: {
-    ...mapGetters(["getSelectedQuiz", "getCategoryName"]),
+    ...mapGetters(["getSelectedQuiz", "getCategoryName", "getUserId"]),
   },
   methods: {
     onReturnClick() {
       this.$router.push({ name: "home/categories" });
     },
     async fetchQuiz() {
+      this.$store.commit("resetUserAnswers");
       if (this.isSuccess) {
         return;
       }
@@ -76,13 +81,21 @@ export default {
         });
     },
     getCurrentQuestionAnswers(questionId) {
-      console.log(this.answers);
       if (this.answers) {
         return this.answers?.find((answer) => answer.questionId === questionId);
       } else {
-        console.log("IAMHERE");
         this.fetchQuiz();
         return this.answers?.find((answer) => answer.questionId === questionId);
+      }
+    },
+    async onSubmit() {
+      const payload = {
+        userId: this.getUserId,
+        quizId: this.quiz.id,
+      };
+      const result = await this.$store.dispatch("submitQuizAnswers", payload);
+      if (result) {
+        this.$router.push({ name: "home/categories" });
       }
     },
   },
@@ -113,39 +126,46 @@ export default {
   }
   .buttons {
     gap: 2rem;
+  }
+}
 
-    .btn {
-      cursor: pointer;
-      $current-color: $radical-red;
-      margin-inline: 1rem;
-      font-family: "Poppins-Regular";
-      font-size: 1.4rem;
-      padding: 1em 2em;
-      background-color: transparent;
-      color: $current-color;
-      border: 4px solid $current-color;
-      border-radius: 0.5rem;
-      transition: all 0.4s;
-      &:hover {
-        color: black;
-        background-color: $current-color;
-        text-shadow: 0 0 5px $current-color;
-        box-shadow: 0px 0px 5px $current-color, 0px 0px 15px $current-color, 0px 0px 25px $current-color,
-          0px 0px 35px $current-color;
-      }
-      &.btn-purple {
-        $current-color: $purple-heart;
-        border: 4px solid $current-color;
-        color: $current-color;
-        &:hover {
-          color: white;
-          background-color: $current-color;
-          text-shadow: 0 0 5px $current-color;
-          box-shadow: 0px 0px 5px $current-color, 0px 0px 15px $current-color, 0px 0px 25px $current-color,
-            0px 0px 35px $current-color;
-        }
-      }
+.btn {
+  cursor: pointer;
+  $current-color: $radical-red;
+  margin-inline: 1rem;
+  font-family: "Poppins-Regular";
+  font-size: 1.4rem;
+  padding: 1em 2em;
+  background-color: transparent;
+  color: $current-color;
+  border: 4px solid $current-color;
+  border-radius: 0.5rem;
+  transition: all 0.4s;
+  &:hover {
+    color: black;
+    background-color: $current-color;
+    text-shadow: 0 0 5px $current-color;
+    box-shadow: 0px 0px 5px $current-color, 0px 0px 15px $current-color, 0px 0px 25px $current-color,
+      0px 0px 35px $current-color;
+  }
+  &.btn-purple {
+    $current-color: $purple-heart;
+    border: 4px solid $current-color;
+    color: $current-color;
+    &:hover {
+      color: white;
+      background-color: $current-color;
+      text-shadow: 0 0 5px $current-color;
+      box-shadow: 0px 0px 5px $current-color, 0px 0px 15px $current-color, 0px 0px 25px $current-color,
+        0px 0px 35px $current-color;
     }
+  }
+
+  &.submit-btn {
+    display: block;
+    margin-inline: auto;
+    margin-block: 4rem;
+    margin-block-end: 2rem;
   }
 }
 

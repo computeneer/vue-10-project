@@ -634,5 +634,154 @@
       "name": "Quiz 8",
       "difficulty": 4
     }
+  ],
+  "userAnswers": [
+    {
+      "userId": 1,
+      "quizId": 2,
+      "answers": [
+        {
+          "id": 4,
+          "option": {
+            "text": "Answer 1",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 7,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        },
+        {
+          "id": 8,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        },
+        {
+          "id": 11,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        },
+        {
+          "id": 16,
+          "option": {
+            "text": "Answer 4",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 17,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        }
+      ],
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "quizId": 2,
+      "answers": [
+        {
+          "id": 4,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 7,
+          "option": {
+            "text": "Answer 1",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 8,
+          "option": {
+            "text": "Answer 2",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 11,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        },
+        {
+          "id": 16,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        },
+        {
+          "id": 17,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        }
+      ],
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "quizId": 2,
+      "answers": [
+        {
+          "id": 4,
+          "option": {
+            "text": "Answer 1",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 7,
+          "option": {
+            "text": "Answer 4",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 8,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        },
+        {
+          "id": 11,
+          "option": {
+            "text": "Answer 2",
+            "isCorrectAnswer": false
+          }
+        },
+        {
+          "id": 16,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        },
+        {
+          "id": 17,
+          "option": {
+            "text": "Answer 3",
+            "isCorrectAnswer": true
+          }
+        }
+      ],
+      "id": 3
+    }
   ]
 }

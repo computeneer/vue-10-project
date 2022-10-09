@@ -7,7 +7,7 @@
           :class="`question-answers-option ${selectedId === index && 'active'}`"
           v-for="(option, index) in sortArray"
           :key="option.text"
-          @click="handleClick(index)"
+          @click="handleClick(index, option)"
         >
           {{ option.text }}
         </div>
@@ -40,8 +40,9 @@ export default {
     },
   },
   methods: {
-    handleClick(optionId) {
+    handleClick(optionId, option) {
       this.selectedId = optionId;
+      this.$store.commit("setUserAnswers", { id: this.question.id, option });
     },
   },
 };
